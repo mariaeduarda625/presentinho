@@ -74,6 +74,115 @@ body {
   }
 }
 
+/* MENSAGENS */
+.mensagens {
+  background: #ffffff;
+  padding: 70px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.mensagens-card {
+  background: #f4faff;
+  border: 2px solid #cfe9ff;
+  border-radius: 25px;
+  padding: 40px 30px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* BOTÃO */
+.btn-mensagens {
+  background: #7bbcff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-mensagens:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(123,188,255,0.4);
+}
+
+/* GALERIA */
+.galeria-mensagens {
+  display: none;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.galeria-mensagens.mostrar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.galeria-mensagens img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.galeria-mensagens img:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+  .mensagens-card {
+    padding: 30px 20px;
+  }
+}
+
+/* MODAL IMAGEM */
+.modal-imagem {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-imagem img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  animation: zoomImagem 0.3s ease;
+}
+
+.modal-imagem .fechar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ANIMAÇÃO */
+@keyframes zoomImagem {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 /* PLAYLIST */
 .playlist {
   background: linear-gradient(180deg, #ffffff, #f4faff);

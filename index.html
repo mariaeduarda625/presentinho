@@ -59,6 +59,56 @@
       <li>🩵EU AMO VOCÊ MEU AMOR🩵</li>  
     </ul>
   </section>
+  <!-- MENSAGENS / PRINTS -->
+    <section class="mensagens">
+    <div class="mensagens-card">
+        <h2>Mensagens suas 💌</h2>
+        <p>
+        Algumas mensagens suas em que sou apaixonada 💙
+        </p>
+
+        <button onclick="abrirMensagens()" class="btn-mensagens">
+        Ver nossas mensagens 💙
+        </button>
+
+        <!-- GALERIA (escondida) -->
+        <div class="galeria-mensagens" id="galeriaMensagens">
+        <img src="imagens/1.jpeg" alt="Mensagem 1" onclick="abrirImagem(this)">
+        <img src="imagens/2.jpeg" alt="Mensagem 2"onclick="abrirImagem(this)">
+        <img src="imagens/3.jpeg" alt="Mensagem 3"onclick="abrirImagem(this)">
+        <img src="imagens/4.jpeg" alt="Mensagem 4"onclick="abrirImagem(this)">
+        <img src="imagens/5.jpeg" alt="Mensagem 5"onclick="abrirImagem(this)">
+        <img src="imagens/6.jpeg" alt="Mensagem 6"onclick="abrirImagem(this)">
+        <img src="imagens/7.jpeg" alt="Mensagem 7"onclick="abrirImagem(this)">
+        <img src="imagens/8.jpeg" alt="Mensagem 8"onclick="abrirImagem(this)">
+        <img src="imagens/9.jpeg" alt="Mensagem 9"onclick="abrirImagem(this)">
+        <img src="imagens/10.jpeg" alt="Mensagem 10"onclick="abrirImagem(this)">
+        <img src="imagens/11.jpeg" alt="Mensagem 11"onclick="abrirImagem(this)">
+        <img src="imagens/12.jpeg" alt="Mensagem 12"onclick="abrirImagem(this)">
+        <img src="imagens/13.jpeg" alt="Mensagem 13"onclick="abrirImagem(this)">
+        <img src="imagens/14.jpeg" alt="Mensagem 14"onclick="abrirImagem(this)">
+        <img src="imagens/15.jpeg" alt="Mensagem 15"onclick="abrirImagem(this)">
+        <img src="imagens/16.jpeg" alt="Mensagem 16"onclick="abrirImagem(this)">
+        <img src="imagens/17.jpeg" alt="Mensagem 17"onclick="abrirImagem(this)">
+        <img src="imagens/18.jpeg" alt="Mensagem 18"onclick="abrirImagem(this)">
+        <img src="imagens/19.jpeg" alt="Mensagem 19"onclick="abrirImagem(this)">
+        <img src="imagens/20.jpeg" alt="Mensagem 20"onclick="abrirImagem(this)">
+        <img src="imagens/21.jpeg" alt="Mensagem 21"onclick="abrirImagem(this)">
+        <img src="imagens/22.jpeg" alt="Mensagem 22"onclick="abrirImagem(this)">
+        <img src="imagens/23.jpeg" alt="Mensagem 23"onclick="abrirImagem(this)">
+        <img src="imagens/24.jpeg" alt="Mensagem 24"onclick="abrirImagem(this)">
+        </div>
+    </div>
+     
+    </section>
+
+    <script>
+    function abrirMensagens() {
+        const galeria = document.getElementById("galeriaMensagens");
+        galeria.classList.toggle("mostrar");
+    }
+    </script>
+
 
   <!-- PLAYLIST SPOTIFY -->
 <section class="playlist">
@@ -82,7 +132,7 @@
 
   <!-- SURPRESA -->
     <section class="surprise">
-    <button onclick="mostrarSurpresa()">Clique para uma surpresa 💙</button>
+    <button onclick="mostrarSurpresa()">E para terminar, clique aqui 💙</button>
 
     <div class="card-surpresa" id="cardSurpresa">
         <h3>Te Amar 💙</h3>
@@ -102,6 +152,26 @@
         card.classList.toggle("ativo");
     }
 </script>
+    <!-- MODAL IMAGEM GRANDE -->
+<div class="modal-imagem" id="modalImagem" onclick="fecharImagem()">
+  <span class="fechar">&times;</span>
+  <img id="imagemGrande">
+</div>
+
+<script>
+  function abrirImagem(img) {
+    const modal = document.getElementById("modalImagem");
+    const imagemGrande = document.getElementById("imagemGrande");
+
+    imagemGrande.src = img.src;
+    modal.style.display = "flex";
+  }
+
+  function fecharImagem() {
+    document.getElementById("modalImagem").style.display = "none";
+  }
+</script>
+
 
 
 </body>
