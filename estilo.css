@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #2b4a6f;
+}
+
+/* HOME */
+.home {
+  background: linear-gradient(180deg, #cfe9ff, #ffffff);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.home h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+}
+.home p{
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.6;
+    
+}
+
+/* LISTA */
+.love-list {
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.love-list h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.motivos {
+  list-style: none;
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+}
+
+.motivos li {
+  font-size: 16px;
+  padding: 10px 0;
+  text-align: center;
+}
+/* linhas pares (azul claro) */
+.motivos li:nth-child(even) {
+  background-color: #cfe9ff;
+}
+
+/* linhas ímpares (branco) */
+.motivos li:nth-child(odd) {
+  background-color: #f1f2eb;
+}
+.motivos li:hover {
+  background-color: #7bbcff;
+  color: white;
+  transition: 0.3s;
+}
+
+@media (max-width: 480px) {
+  .motivos li {
+    font-size: 15px;
+    padding: 14px;
+  }
+}
+
+/* PLAYLIST */
+.playlist {
+  background: linear-gradient(180deg, #ffffff, #f4faff);
+  padding: 70px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.playlist-card {
+  background: #ffffff;
+  border: 2px solid #cfe9ff;
+  border-radius: 25px;
+  padding: 40px 30px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.playlist-card .icon {
+  font-size: 34px;
+}
+
+.playlist-card h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 34px;
+  margin: 15px 0;
+}
+
+.playlist-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* BOTÃO */
+.btn-playlist {
+  display: inline-block;
+  background: #7bbcff;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-playlist:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(123, 188, 255, 0.5);
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+  .playlist-card {
+    padding: 30px 20px;
+  }
+
+  .playlist-card h2 {
+    font-size: 28px;
+  }
+
+  .btn-playlist {
+    padding: 14px 25px;
+    font-size: 15px;
+  }
+}
+
+
+/* SURPRESA */
+.surprise {
+  text-align: center;
+  padding: 60px 20px;
+ 
+ 
+}
+
+/* CARD SURPRESA */
+.card-surpresa {
+  background: #cfe9ff;
+  max-width: 500px;
+  margin: 30px auto 0;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+  display: none;
+}
+
+.card-surpresa h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card-surpresa p {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* QUANDO APARECE */
+.card-surpresa.ativo {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .home h1 {
+    font-size: 36px;
+  }
+
+  .love-list h2,
+  .music h2 {
+    font-size: 28px;
+  }
+}
+
